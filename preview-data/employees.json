@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "name": "Sowmya",
+        "age": 23,
+        "nationality": "India",
+        "gender" : "F",
+        "dob": "1997-10-13"
+
+    
+    },
+    {
+        "id": 2,
+        "name": "Ram",
+        "age": 23,
+        "nationality": "India",
+        "gender" : "M",
+        "dob": "1997-11-08"
+
+    
+    }
+]
