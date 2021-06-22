@@ -6,7 +6,6 @@ import EmployeeDataJSON from '../../preview-data/employee.json';
 import { Iemployee } from '../types/sample-data'
 import Radio from '@material-ui/core/Radio';
 import Select from '@material-ui/core/Select';
-import { CLIENT_RENEG_LIMIT } from 'tls';
 import { useEffect } from 'react';
 
 
@@ -36,7 +35,7 @@ function EmployeePreview() {
   const submitHandler = () => {
     console.log(formValues);
   }
-
+  
   return (
     <div>
       <form noValidate autoComplete="off">

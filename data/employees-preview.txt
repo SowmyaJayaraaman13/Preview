@@ -1,0 +1,39 @@
+      <Grid container justify="center" alignItems="center" className='tableWrapper'>
+        <Grid item>
+          <TableContainer component={Paper} className='table'>
+            <Table aria-label="simple table">
+              <TableHead >
+                <TableRow >
+                  {
+                    tableData.map(renderTableHeader)
+                  }
+                </TableRow>
+              </TableHead>
+              <TableBody>
+              {
+                formValues.map(renderTableBody)
+              }                
+              </TableBody>
+            </Table>
+          </TableContainer>
+        </Grid>
+            <style jsx>{`
+              .tableWrapper{
+                height: 100vh;
+              }
+              .tableHeader{
+                font-weight:bold;
+                font-size: 20px;
+              }
+              .table {
+                height: max-content;
+                width: 650;    
+                border: 2px solid black;
+
+              }
+            `}
+              </style>
+      </Grid>
+
+
+

@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 function MyApp({ Component, pageProps }) {
 
 
+  /* To remove server side injected css */
   useEffect(() => {
     const jssStyles = document.querySelector('#jss-server-side')
     if (jssStyles) {

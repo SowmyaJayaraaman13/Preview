@@ -1,0 +1,88 @@
+<form noValidate autoComplete="off">
+            <Grid container justify="center" alignItems="center" direction="column" className={'gridWrapper'}>
+              <Grid item className={'employeeDetail'}>
+                <strong className={'formLabel'}>Name </strong>
+                <TextField className={'textInputs'} size='small' value={formValues.name} onChange={changeHandler} name="name" />
+              </Grid>
+              <Grid item className={'employeeDetail'}>
+                <strong className={'formLabel'}>Age: </strong>
+                <TextField className={'textInputs'} size='small' value={formValues.age} onChange={changeHandler} name="age" />
+              </Grid>
+              <Grid item className={'employeeDetail'}>
+                <strong className={'formLabel'}>DOB: </strong>
+                <TextField
+                  id="dob"
+                  type="date"
+                  name="dob"
+                  className={'textInputs'}
+                  value={formValues.dob}
+                  onChange={changeHandler}
+                />
+              </Grid>
+              <Grid item className={'employeeDetail'}>
+                <strong className={'formLabel'}>Nationality: </strong>
+                <Select
+                  name='nationality'
+                  value={formValues.nationality}
+                  onChange={changeHandler}
+                  className={'textInputs'}
+                >
+                  <MenuItem value='America'>America</MenuItem>
+                  <MenuItem value='India'>India</MenuItem>
+                  <MenuItem value='Europe'>Europe</MenuItem>
+                  <MenuItem value='Australia'>Australia</MenuItem>
+                  <MenuItem value='Iran'>Iran</MenuItem>
+    
+                </Select>
+              </Grid>
+              <Grid item className={'employeeDetail'}>
+                <strong className={'formLabel'}>Gender: </strong>
+                <FormControl component="fieldset">
+                  <RadioGroup aria-label="gender" className={'textInputs radioGroupStyles'} row={true} value={formValues.gender} onChange={changeHandler}>
+                    <FormControlLabel
+                      control={<Radio checked={formValues.gender === 'M'} value="M" name="gender" color="primary" />}
+                      label="Male"
+                      labelPlacement="end"
+                    />
+                    <FormControlLabel
+                      control={<Radio checked={formValues.gender === 'F'} value="F" name="gender" color="primary" />}
+                      label="Female"
+                      labelPlacement="end"
+                    />
+                  </RadioGroup>
+                </FormControl>
+              </Grid>
+              <Grid item className={'employeeDetail'}>
+                <Button className={'formButton'} color="primary" variant="contained" size="small" onClick={submitHandler}> Submit</Button>
+              </Grid>
+            </Grid>
+            
+      <style jsx>{`
+        .gridWrapper {
+          height: 100vh;
+        }
+        .formLabel{
+          width: 35%;
+        }
+        .employeeDetail{
+          width: 30%;
+          display:flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 10px;
+          margin: 3px;
+        }
+        .textInputs{
+          margin-left: 12px;
+          width: 350px;
+        }
+        .radioGroupStyles{
+          display: flex;
+        }
+        .formButton{
+          width:25%;
+          margin: 0 auto;
+        }
+    `}</style>
+</form>
+            
